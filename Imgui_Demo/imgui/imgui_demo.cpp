@@ -359,7 +359,8 @@ void ImGui::ShowDemoWindow(bool* p_open)
         if (ImGui::BeginMenu("Examples"))
         {
             IMGUI_DEMO_MARKER("Menu/Examples");
-            ImGui::MenuItem("Main menu bar", NULL, &show_app_main_menu_bar);
+            //Disabled this for the demo, as it'd interfere with how the demo is set up. Remove the false at the end to enable
+            ImGui::MenuItem("Main menu bar (disable for this demo)", NULL, &show_app_main_menu_bar, false);
             ImGui::MenuItem("Console", NULL, &show_app_console);
             ImGui::MenuItem("Log", NULL, &show_app_log);
             ImGui::MenuItem("Simple layout", NULL, &show_app_layout);
