@@ -8,6 +8,8 @@
 #include "implot.h"
 #include <d3d11.h>
 #include <tchar.h>
+#pragma once
+#include "Graphing_Demo.h"
 
 // Data
 static ID3D11Device* g_pd3dDevice = NULL;
@@ -27,6 +29,7 @@ static void ShowDemoWindowsMenu();
 bool show_Initial_ImGui_Window = false;
 bool show_Main_ImGui_Window = false;
 bool show_ImPlot_Window = false;
+bool show_Ellipse_Window = false;
 
 // Main code
 int main(int, char**)
@@ -121,6 +124,10 @@ int main(int, char**)
         //if (show_demo_window)
         if (show_Main_ImGui_Window)
             ImGui::ShowDemoWindow(&show_Main_ImGui_Window);
+
+        if (show_Ellipse_Window) {
+            show_Ellipse_Window = Create_Ellipse_Window(&show_Ellipse_Window);
+        }
 
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to create a named window.
         if (show_Initial_ImGui_Window)
@@ -309,6 +316,7 @@ static void ShowDemoWindowsMenu() {
         ImGui::MenuItem("Show Initial ImGui Window", NULL, &show_Initial_ImGui_Window);
         ImGui::MenuItem("Show Main ImGui Window", NULL, &show_Main_ImGui_Window);
         ImGui::MenuItem("Show ImPlot Window", NULL, &show_ImPlot_Window);
+        ImGui::MenuItem("Show Ellipse Demo Window", NULL, &show_Ellipse_Window);
         ImGui::EndMenu();
     }
 }

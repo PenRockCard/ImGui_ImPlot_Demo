@@ -32,6 +32,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 
 #ifdef _MSC_VER
 #define sprintf sprintf_s
@@ -2293,6 +2294,9 @@ ImPlotPoint Spiral(int idx, void*) {
     float n = (r - a) / b;     // number  of revolutions
     double th = 2 * n * 3.14;  // angle
     float Th = float(th * idx / (1000 - 1));
+//    std::cout << "Theta: " << Th << std::endl;
+//    std::cout << "X: " << 0.5f+(a + b*Th / (2.0f * (float) 3.14))*cos(Th) << std::endl;
+//    std::cout << "Y: " << 0.5f + (a + b*Th / (2.0f * (float)3.14))*sin(Th) << std::endl;
     return ImPlotPoint(0.5f+(a + b*Th / (2.0f * (float) 3.14))*cos(Th),
                        0.5f + (a + b*Th / (2.0f * (float)3.14))*sin(Th));
 }
