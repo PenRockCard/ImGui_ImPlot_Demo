@@ -8,6 +8,8 @@ This was made to assist with [my other project](https://github.com/PenRockCard/V
 I thought I'd share it so if I broke my setup completely I could easily recover a working demo. 
 If people see it and happen to use it to quickly get a demo running, that's good too! Figuring out the target_link_libraries line in the CMake file was a pain for me. 
 
+See other branch for ellipse demo.
+
 Future Plans:
 - Add [more complicated ImPlot demos](https://github.com/epezent/implot_demos) to this
 - ~~Disable the main menu bar in the main ImGui demo window.~~
