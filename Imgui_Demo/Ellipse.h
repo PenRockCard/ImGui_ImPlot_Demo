@@ -3,7 +3,6 @@
 
 #include <math.h>
 #include <numbers>
-#include "implot.h"
 #include <vector>
 
 struct EllipsePoint {
@@ -35,10 +34,6 @@ public:
             double angleConstr = 0);
 
     void UpdateNumberPoints(int newNumberPoints);
-
-    ImPlotPoint GetPoint(int pointNumber);
-
-    ImPlotPoint GetPoint(int pointNumber, void *);
 
     double *GetXArray();
 
